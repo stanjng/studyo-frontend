@@ -12,10 +12,14 @@ const QuestionEdit = props => {
   /* initializes updates and setUpdated as false */
   const [ updated, setUpdated ] = useState(false)
   /* axios request to get the question that matched the existing id */
-  console.log(props)
   useEffect(() => {
-    axios(`/topics/${props.match.params.id}/questions/${props.match.params.qid}`)
-      .then(console.log)
+    axios({
+      url: apiUrl + `/topics/${props.match.params.id}/questions/${props.match.params.qid}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${props.user.token}`
+      }
+    })
       .then(res => setQuestion(res.data.question))
       .catch(console.error)
   }, [])
@@ -30,7 +34,7 @@ const QuestionEdit = props => {
     event.preventDefault()
     /* axios PATCH request that requires user Authorization */
     axios({
-      url: `${apiUrl}/questions/${props.match.params.id}`,
+      url: `${apiUrl}/topics/${props.match.params.id}/questions/${props.match.params.qid}`,
       method: 'PATCH',
       headers: {
         'Authorization': `Token token=${props.user.token}`

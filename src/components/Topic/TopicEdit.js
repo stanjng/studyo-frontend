@@ -12,7 +12,6 @@ const TopicEdit = props => {
   /* initializes updates and setUpdated as false */
   const [ updated, setUpdated ] = useState(false)
   /* axios request to get the topic that matched the existing id */
-  console.log(props)
   useEffect(() => {
     axios(`${apiUrl}/topics/${props.match.params.id}`)
       .then(res => setTopic(res.data.topic))

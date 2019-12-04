@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 const TopicForm = (props) => {
-  console.log(props)
   const { topic, handleChange, handleSubmit, cancelPath, heading, prop1, prop2 } = props
   return (
     <div className="row">
