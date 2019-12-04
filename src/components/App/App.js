@@ -8,6 +8,14 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import Topic from '../Topic/Topic.js'
+import Topics from '../Topic/Topics.js'
+import TopicCreate from '../Topic/TopicCreate.js'
+import TopicEdit from '../Topic/TopicEdit.js'
+import Question from '../Question/Question.js'
+import QuestionCreate from '../Question/QuestionCreate.js'
+import QuestionEdit from '../Question/QuestionEdit.js'
+import SplashPage from '../../shared/SplashPage.js'
 
 class App extends Component {
   constructor () {
@@ -42,6 +50,9 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <SplashPage />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
@@ -53,6 +64,27 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute exact path='/topics/' user={user} render={() => (
+            <Topics alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute exact path='/topics/:id/questions/:qid' user={user} render={() => (
+            <Question alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute exact path='/topics/:id/create-question/' user={user} render={() => (
+            <QuestionCreate alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute exact path='/topics/:id' user={user} render={() => (
+            <Topic alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-topic' render={() => (
+            <TopicCreate alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/topics/:id/edit' render={() => (
+            <TopicEdit alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute exact path='/topics/:id/questions/:qid/edit' user={user} render={() => (
+            <QuestionEdit alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>
