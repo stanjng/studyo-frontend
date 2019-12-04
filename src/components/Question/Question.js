@@ -41,8 +41,6 @@ const Question = props => {
     return <p>Loading stuff...</p>
   }
 
-  console.log(userId)
-
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
@@ -50,8 +48,18 @@ const Question = props => {
         <p>{question.answer}</p>
         {userId === question.owner && (
           <Fragment>
-            <Button href={`#topics/${props.match.params.id}/questions/${props.match.params.qid}/edit`} variant="primary" className="mr-2">Update</Button>
-            <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
+            <Button
+              href={`#topics/${props.match.params.id}/questions/${props.match.params.qid}/edit`}
+              variant="primary"
+            >
+            Update
+            </Button>
+            <Button
+              onClick={handleDelete}
+              variant="danger"
+            >
+            Delete
+            </Button>
           </Fragment>
         )}
         <Button href={`#topics/${props.match.params.id}/`} variant="secondary">Back</Button>

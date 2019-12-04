@@ -3,14 +3,14 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 const TopicForm = (props) => {
-  const { topic, handleChange, handleSubmit, cancelPath, heading, prop1, prop2 } = props
+  const { topic, handleChange, handleSubmit, cancelPath, heading } = props
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h2>{heading}</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="title">
-            <Form.Label>{prop1}</Form.Label>
+            <Form.Label>Title</Form.Label>
             <Form.Control
               placeholder="What would you like to study?"
               value={topic.title}
@@ -19,7 +19,7 @@ const TopicForm = (props) => {
             />
           </Form.Group>
           <Form.Group controlId="information">
-            <Form.Label>{prop2}</Form.Label>
+            <Form.Label>Information</Form.Label>
             <Form.Control
               placeholder="Topic Information"
               value={topic.information}

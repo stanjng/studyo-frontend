@@ -31,7 +31,13 @@ const TopicCreate = (props) => {
   }
 
   return (
-    <TopicForm heading="New Study Topic" topic={topic} handleChange={handleChange} handleSubmit={handleSubmit} cancelPath='#/topics' />
+    <TopicForm
+      heading="New Study Topic"
+      topic={topic}
+      handleChange={handleChange}
+      handleSubmit={handleSubmit}
+      cancelPath='#/topics'
+    />
   )
 }
 

@@ -13,7 +13,13 @@ const TopicEdit = props => {
   const [ updated, setUpdated ] = useState(false)
   /* axios request to get the topic that matched the existing id */
   useEffect(() => {
-    axios(`${apiUrl}/topics/${props.match.params.id}`)
+    axios({
+      url: apiUrl + `/topics/${props.match.params.id}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${props.user.token}`
+      }
+    })
       .then(res => setTopic(res.data.topic))
       .catch(console.error)
   }, [])
@@ -51,8 +57,6 @@ const TopicEdit = props => {
     <TopicForm
     /* rquired properties from TopicForm */
       heading="Edit Topic Details"
-      prop1="Title"
-      prop2="Information"
       topic={topic}
       handleChange={handleChange}
       handleSubmit={handleSubmit}

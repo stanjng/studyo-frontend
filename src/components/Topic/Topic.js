@@ -67,7 +67,13 @@ const Topic = props => {
           <p>{topic.information}</p>
           {userId === topic.owner && (
             <Fragment>
-              <Button href={`#topics/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
+              <Button
+                href={`#topics/${props.match.params.id}/edit`}
+                variant="primary"
+                className="mr-2"
+              >
+              Update
+              </Button>
               <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
             </Fragment>
           )}
