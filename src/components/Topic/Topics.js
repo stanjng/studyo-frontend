@@ -37,7 +37,7 @@ const Topics = props => {
       <div className="col-sm-10 col-md-12 mx-auto mt-5">
         <div className="d-flex justify-content-between align-items-center">
           <h1 className="titles">Topics</h1>
-          {props.user && <Button href="#/create-topic" variant="primary">Add a Topic</Button>}
+          {props.user && <Button href="#/create-topic" variant="warning">Add a Topic</Button>}
         </div>
         <ListGroup>
           {topicsJsx}

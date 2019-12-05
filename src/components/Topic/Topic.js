@@ -63,27 +63,29 @@ const Topic = props => {
         <Col sm={6} className="study-topic">
           <h2 className="titles">Study Topic</h2>
           <h3 className="topic-title">{topic.title}</h3>
+          <p>
+            {userId === topic.owner && (
+              <Fragment>
+                <Button
+                  href={`#topics/${props.match.params.id}/edit`}
+                  variant="primary"
+                  className="mr-2"
+                >
+                Update
+                </Button>
+                <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
+              </Fragment>
+            )}
+            <Button href="#/topics/" variant="secondary" className="mr-2">Back</Button>
+          </p>
           <h5>About this Topic:</h5>
           <p>{topic.information}</p>
-          {userId === topic.owner && (
-            <Fragment>
-              <Button
-                href={`#topics/${props.match.params.id}/edit`}
-                variant="primary"
-                className="mr-2"
-              >
-              Update
-              </Button>
-              <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
-            </Fragment>
-          )}
-          <Button href="#/topics/" variant="secondary" className="mr-2">Back</Button>
         </Col>
         <Col sm={6}>
           <h2 className="titles">Important Questions</h2>
           <ListGroup>
-            {props.user && <Button href={`#/topics/${props.match.params.id}/create-question`} variant="primary">Add Question</Button>}
-            {questionsJsx}
+            <p className="center">{props.user && <Button href={`#/topics/${props.match.params.id}/create-question`} variant="warning">Add Question</Button>}</p>
+            <p>{questionsJsx}</p>
           </ListGroup>
         </Col>
       </Row>

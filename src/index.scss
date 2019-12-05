@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap');
 
-$masthead: rgba(190, 190, 190, .4);
+$masthead: rgba(190, 190, 190, .3);
+$beige: rgba(245, 244, 242, .3);
+$light-grey: rgba(200, 200, 200, .3);
+$danger: rgba(200, 69, 74, .3);
 
 body {
   -moz-background-size: cover;
@@ -21,6 +24,10 @@ body {
   background-color: red;
 }
 
+.center {
+  text-align: center;
+}
+
 .col-sm-6 {
   padding: 0;
 }
@@ -28,6 +35,16 @@ body {
 .list-group {
   overflow: auto;
 }
+
+.list-group-item {
+  background-color: $beige;
+  border: 1px solid $masthead;
+}
+
+.list-group-item:hover {
+  background-color: $light-grey;
+}
+
 //
 // .masthead .masthead-bg {
 //   background-color: $masthead;
