@@ -44,7 +44,9 @@ const Question = props => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>{question.query}</h2>
+        <h4>Question:</h4>
+        <p>{question.query}</p>
+        <h4>Answer:</h4>
         <p>{question.answer}</p>
         {userId === question.owner && (
           <Fragment>
