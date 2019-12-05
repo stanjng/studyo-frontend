@@ -40,7 +40,7 @@ const Topics = props => {
           {props.user && <Button href="#/create-topic" variant="warning">Add a Topic</Button>}
         </div>
         <ListGroup>
-          {topicsJsx}
+          { topics ? topicsJsx : <h4>{'Let\'s study something!'}</h4> }
         </ListGroup>
       </div>
     </div>

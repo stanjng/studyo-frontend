@@ -13,7 +13,13 @@ const Splash = (props) => (
           <p>
             {props.user &&
               <Fragment>
-                <p>{'You don\'t have any study topics yet. Please add a topic to get started.'}</p>
+                <h6>Select an Option</h6>
+                <Button
+                  href="#/topics"
+                  variant="primary"
+                >
+                View Topics
+                </Button>
                 <Button
                   href="#/create-topic"
                   variant="warning"
