@@ -52,7 +52,7 @@ class ChangePassword extends Component {
         <div className="masthead">
           <div className="col masthead-bg"></div>
         </div>
-        <div className="row">
+        <div className="row content-section">
           <div className="col-sm-10 col-md-8 mx-auto mt-5">
             <h3 className="titles">Change Password</h3>
             <Form onSubmit={this.onChangePassword}>

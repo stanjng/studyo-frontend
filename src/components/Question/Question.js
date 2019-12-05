@@ -3,6 +3,9 @@ import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Question = props => {
   const [question, setQuestion] = useState(null)
@@ -42,31 +45,33 @@ const Question = props => {
   }
 
   return (
-    <div className="row">
-      <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h4>Question:</h4>
-        <p>{question.query}</p>
-        <h4>Answer:</h4>
-        <p>{question.answer}</p>
-        {userId === question.owner && (
-          <Fragment>
-            <Button
-              href={`#topics/${props.match.params.id}/questions/${props.match.params.qid}/edit`}
-              variant="primary"
-            >
-            Update
-            </Button>
-            <Button
-              onClick={handleDelete}
-              variant="danger"
-            >
-            Delete
-            </Button>
-          </Fragment>
-        )}
-        <Button href={`#topics/${props.match.params.id}/`} variant="secondary">Back</Button>
-      </div>
-    </div>
+    <Container className="content-section">
+      <Row className="mx-auto mt-5">
+        <Col className="study-topic">
+          <h4>Question:</h4>
+          <p>{question.query}</p>
+          <h4>Answer:</h4>
+          <p>{question.answer}</p>
+          {userId === question.owner && (
+            <Fragment>
+              <Button
+                href={`#topics/${props.match.params.id}/questions/${props.match.params.qid}/edit`}
+                variant="primary"
+              >
+              Update
+              </Button>
+              <Button
+                onClick={handleDelete}
+                variant="danger"
+              >
+              Delete
+              </Button>
+            </Fragment>
+          )}
+          <Button href={`#topics/${props.match.params.id}/`} variant="secondary">Back</Button>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

@@ -33,15 +33,15 @@ const Topics = props => {
   ))
 
   return (
-    <div className="row">
-      <div className="col-sm-10 col-md-12 mx-auto mt-5">
-        <div className="d-flex justify-content-between align-items-center">
-          <h1 className="titles">Topics</h1>
-          {props.user && <Button href="#/create-topic" variant="warning">Add a Topic</Button>}
+    <div className="row content-section">
+      <div className="col-sm-10 col-md-12 mx-auto mt-5 h-100">
+        <div>
+          <div><h1 className="titles">Topics</h1></div>
+          <div>{props.user && <Button href="#/create-topic" variant="warning">Add a Topic</Button>}</div>
         </div>
-        <ListGroup>
-          { topics ? topicsJsx : <h4>{'Let\'s study something!'}</h4> }
-        </ListGroup>
+        <div className="mx-auto mt-3">
+          { topics ? <ListGroup>{topicsJsx}</ListGroup> : <h4>{'Let\'s tudy something!'}</h4> }
+        </div>
       </div>
     </div>
   )

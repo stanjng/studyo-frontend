@@ -32,6 +32,14 @@ body {
   padding: 0;
 }
 
+.content-section {
+  background-color: $beige;
+  border: 1px solid $masthead;
+  box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.61);
+  height: 92.3vh;
+  text-align: center;
+}
+
 .list-group {
   overflow: auto;
 }
@@ -64,13 +72,6 @@ body {
   font-family: 'Megrim', cursive;
   font-size: 1.8rem;
   padding: 0;
-}
-
-.splash-page {
-  box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.61);
-  height: 92.3vh;
-  text-align: center;
-  z-index: 9999;
 }
 
 .study-topic {

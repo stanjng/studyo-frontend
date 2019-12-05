@@ -58,8 +58,8 @@ const Topic = props => {
   ))
 
   return (
-    <Container>
-      <Row>
+    <Container className="content-section">
+      <Row className="mx-auto mt-5">
         <Col sm={6} className="study-topic">
           <h2 className="titles">Study Topic</h2>
           <h3 className="topic-title">{topic.title}</h3>
