@@ -38,7 +38,7 @@ Next, I created a new components for each CRUD function along wit a splash page.
 
 Finally, I ensured each component displays properly and is functional. Style was done along each stop of the sode.
 
-Troubleshoot assistance obtained from GA's SEI instructional team. Particularly challenging routes to create were update and create the child resource (questions).
+Troubleshoot assistance obtained from GA's SEI instructional team.
 
 ## User Stories
 #### When signed out:
@@ -74,4 +74,4 @@ Authorized
 
 ## Acknowledgements
 
-Thank you to my instructors, fellow software engineer classmates, and friends who keep me grounded.
+Thank you to my instructors, fellow software engineer classmates, and friends who keep me grounded and driven.
