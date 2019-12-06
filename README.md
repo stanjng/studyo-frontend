@@ -21,6 +21,8 @@ This is Studyo's front end repository. To view the repository for the Studyo API
 - SASS
 
 ## The Deployed **STUDYO**
+![Unauth Page](https://github.com/stanjng/studyo-frontend/blob/master/public/studyo-1.png?raw=true)
+![Auth Page Example](https://github.com/stanjng/studyo-frontend/blob/master/public/studyo-2.png?raw=true)
 
 ## Setup
 1. Fork & Clone or download this repository.
