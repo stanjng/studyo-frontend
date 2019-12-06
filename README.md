@@ -21,8 +21,8 @@ This is Studyo's front end repository. To view the repository for the Studyo API
 - SASS
 
 ## The Deployed **STUDYO**
-![Unauth Page](https://github.com/stanjng/studyo-frontend/blob/master/public/studyo-1.png?raw=true)
-![Auth Page Example](https://github.com/stanjng/studyo-frontend/blob/master/public/studyo-2.png?raw=true)
+![Unauth Page](./public/studyo-1.png)
+![Auth Page Example](./public/studyo-2.png)
 
 ## Setup
 1. Fork & Clone or download this repository.
@@ -54,6 +54,15 @@ Troubleshoot assistance obtained from GA's SEI instructional team. Particularly 
 - As a user, I want to retrieve just one topic/question to view.
 - As a user, I want to edit the topic/question name and descriptions.
 - As a user, I want to delete a topic/question.
+
+## Wireframes
+
+Unauthorized
+![Unauthorized Page](./public/WF1.png)
+
+Authorized
+![Authorized Page 1](./public/WF2.png)
+![Authorized Page 1](./public/WF3.png)
 
 ## Future Directions
 - Privacy feature so users have the option to make private vs public topics.
