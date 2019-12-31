@@ -49,51 +49,46 @@ class ChangePassword extends Component {
 
     return (
       <Fragment>
-        <div className="masthead">
-          <div className="col masthead-bg"></div>
-        </div>
-        <div className="row content-section">
-          <div className="col-sm-10 col-md-8 mx-auto mt-5">
-            <h3 className="titles">Change Password</h3>
-            <Form onSubmit={this.onChangePassword}>
-              <Form.Group controlId="oldPassword">
-                <Form.Label>Old password</Form.Label>
-                <Form.Control
-                  required
-                  name="oldPassword"
-                  value={oldPassword}
-                  type="password"
-                  placeholder="Old Password"
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-              <Form.Group controlId="newPassword">
-                <Form.Label>New Password</Form.Label>
-                <Form.Control
-                  required
-                  name="newPassword"
-                  value={newPassword}
-                  type="password"
-                  placeholder="New Password"
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-              <Button
-                variant="primary"
-                type="submit"
-              >
-                Submit
-              </Button>
-              <Button
-                link to={'/topics/'}
-                type="button"
-                variant="secondary"
-                className="ml-2"
-              >
-                Cancel
-              </Button>
-            </Form>
-          </div>
+        <div className="col-8 mr-auto ml-auto">
+          <h3 className="titles mt-0">Change Password</h3>
+          <Form onSubmit={this.onChangePassword}>
+            <Form.Group controlId="oldPassword">
+              <Form.Label>Old password</Form.Label>
+              <Form.Control
+                required
+                name="oldPassword"
+                value={oldPassword}
+                type="password"
+                placeholder="Old Password"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="newPassword">
+              <Form.Label>New Password</Form.Label>
+              <Form.Control
+                required
+                name="newPassword"
+                value={newPassword}
+                type="password"
+                placeholder="New Password"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Button
+              variant="primary"
+              type="submit"
+            >
+              Submit
+            </Button>
+            <Button
+              href={'#/topics/'}
+              type="button"
+              variant="secondary"
+              className="ml-2"
+            >
+              Cancel
+            </Button>
+          </Form>
         </div>
       </Fragment>
     )

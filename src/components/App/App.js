@@ -40,7 +40,6 @@ class App extends Component {
 
     return (
       <Fragment>
-        <Header user={user} />
         {alerts.map((alert, index) => (
           <AutoDismissAlert
             key={index}
@@ -49,43 +48,46 @@ class App extends Component {
             message={alert.message}
           />
         ))}
-        <main className="container">
-          <Route exact path='/' render={() => (
-            <SplashPage user={user} />
-          )} />
-          <Route path='/sign-up' render={() => (
-            <SignUp alert={this.alert} setUser={this.setUser} />
-          )} />
-          <Route path='/sign-in' render={() => (
-            <SignIn alert={this.alert} setUser={this.setUser} />
-          )} />
-          <AuthenticatedRoute user={user} path='/sign-out' render={() => (
-            <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/change-password' render={() => (
-            <ChangePassword alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute exact path='/topics/' user={user} render={() => (
-            <Topics alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute exact path='/topics/:id/questions/:qid' user={user} render={() => (
-            <Question alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute exact path='/topics/:id/create-question/' user={user} render={() => (
-            <QuestionCreate alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute exact path='/topics/:id' user={user} render={() => (
-            <Topic alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/create-topic' render={() => (
-            <TopicCreate alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} exact path='/topics/:id/edit' render={() => (
-            <TopicEdit alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute exact path='/topics/:id/questions/:qid/edit' user={user} render={() => (
-            <QuestionEdit alert={this.alert} user={user} />
-          )} />
+        <main className="container content-section">
+          <div className="row">
+            <Header user={user} />
+            <Route exact path='/' render={() => (
+              <SplashPage user={user} />
+            )} />
+            <Route path='/sign-up' render={() => (
+              <SignUp alert={this.alert} setUser={this.setUser} />
+            )} />
+            <Route path='/sign-in' render={() => (
+              <SignIn alert={this.alert} setUser={this.setUser} />
+            )} />
+            <AuthenticatedRoute user={user} path='/sign-out' render={() => (
+              <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
+            )} />
+            <AuthenticatedRoute user={user} path='/change-password' render={() => (
+              <ChangePassword alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute exact path='/topics/' user={user} render={() => (
+              <Topics alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute exact path='/topics/:id/questions/:qid' user={user} render={() => (
+              <Question alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute exact path='/topics/:id/create-question/' user={user} render={() => (
+              <QuestionCreate alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute exact path='/topics/:id' user={user} render={() => (
+              <Topic alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute user={user} path='/create-topic' render={() => (
+              <TopicCreate alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute user={user} exact path='/topics/:id/edit' render={() => (
+              <TopicEdit alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute exact path='/topics/:id/questions/:qid/edit' user={user} render={() => (
+              <QuestionEdit alert={this.alert} user={user} />
+            )} />
+          </div>
         </main>
       </Fragment>
     )

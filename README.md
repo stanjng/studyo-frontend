@@ -2,7 +2,7 @@
 
 ## Let's Study Together
 
-Exam? Presentation? Interview? Just thirsty for knowledge? You can head over to the **STUDYO**! This application allows users to contribute to or learn from a body of knowledge synthesized by _YOU_! Users must create an account or sign in access the Studyo where they are able to create, edit, and delete topics to study. Each topic contains questions to study. Think flash cards, but digital.
+Exam? Presentation? Interview? Just thirsty for knowledge? You can head over to the **STUDYO**! This application allows users to contribute to or learn from a body of knowledge synthesized by _YOU_! Users must create an account or sign in access the Studyo where they are able to create, edit, and delete topics to study. Each topic contains questions to study. Think flash cards, but digital. But more of a place to organize and store data for safekeeping for years and years to come.
 
 **STUDYO**'s front end is React.js based. Axios is used to interact with the API. Layout and styling utilizes the Twitter's Boostrap library and SASS.
 

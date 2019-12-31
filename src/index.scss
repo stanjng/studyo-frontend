@@ -1,17 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 $masthead: rgba(190, 190, 190, .3);
 $beige: rgba(245, 244, 242, .3);
 $light-grey: rgba(200, 200, 200, .3);
-$danger: rgba(200, 69, 74, .3);
+// $danger: rgba(200, 69, 74, .3);
 
 body {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  background: url('./shared/working-pic.png') no-repeat center center fixed;
+  background: url("./shared/working-pic.png") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
 }
@@ -25,11 +24,14 @@ body {
 }
 
 .content-section {
-  background-color: $beige;
-  border: 1px solid $masthead;
-  box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.61);
-  height: 92.3vh;
-  text-align: center;
+  background-color: $danger;
+  box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.9);
+  height: 90vh;
+  margin: 5vh auto;
+  text-transform: uppercase;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-group {
@@ -45,8 +47,9 @@ body {
   }
 }
 
-.navbar {
-  z-index: 9998;
+nav {
+  height: 3.5rem;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -60,7 +63,7 @@ body {
 }
 
 .titles {
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin-top: 1.5rem;
   text-align: center;
 }
