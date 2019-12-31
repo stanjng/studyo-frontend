@@ -50,43 +50,48 @@ class SignIn extends Component {
 
     return (
       <Fragment>
-        <div className="masthead">
-          <div className="col masthead-bg"></div>
-        </div>
-        <div className="row content-section">
-          <div className="col-sm-10 col-md-8 mx-auto mt-5">
-            <h3 className="titles">Sign In</h3>
-            <Form onSubmit={this.onSignIn}>
-              <Form.Group controlId="email">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  required
-                  type="email"
-                  name="email"
-                  value={email}
-                  placeholder="Enter email"
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-              <Form.Group controlId="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  required
-                  name="password"
-                  value={password}
-                  type="password"
-                  placeholder="Password"
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-              <Button
-                variant="primary"
-                type="submit"
-              >
-                Submit
-              </Button>
-            </Form>
-          </div>
+        <div className="col-8 mr-auto ml-auto">
+          <h3 className="titles mt-0">Sign In</h3>
+          <Form
+            onSubmit={this.onSignIn}
+          >
+            <Form.Group controlId="email">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                required
+                type="email"
+                name="email"
+                value={email}
+                placeholder="Enter email"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="password">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                required
+                name="password"
+                value={password}
+                type="password"
+                placeholder="Password"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Button
+              variant="primary"
+              type="submit"
+            >
+              SUBMIT
+            </Button>
+            <Button
+              href={'#/'}
+              type="button"
+              variant="secondary"
+              className="ml-2"
+            >
+              CANCEL
+            </Button>
+          </Form>
         </div>
       </Fragment>
     )

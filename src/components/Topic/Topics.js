@@ -33,16 +33,12 @@ const Topics = props => {
   ))
 
   return (
-    <div className="row content-section">
-      <div className="col-sm-10 col-md-12 mx-auto mt-5 h-100">
-        <div>
-          <div><h1 className="titles">Topics</h1></div>
-          <div>{props.user && <Button href="#/create-topic" variant="warning">Add a Topic</Button>}</div>
-        </div>
-        <div className="mx-auto mt-3">
-          { topics ? <ListGroup>{topicsJsx}</ListGroup> : <h4>{'Let\'s tudy something!'}</h4> }
-        </div>
+    <div className="col ml-auto mr-auto">
+      <h2 className="titles mt-0">Topics</h2>
+      <div className="text-center">
+        { props.user && <Button className="mb-3" href="#/create-topic" variant="warning">Add a Topic</Button> }
       </div>
+      { topics ? <ListGroup>{topicsJsx}</ListGroup> : <h4>{'Let\'s tudy something!'}</h4> }
     </div>
   )
 }
