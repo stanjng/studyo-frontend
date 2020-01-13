@@ -11,7 +11,7 @@ This is Studyo's front end repository. To view the repository for the Studyo API
 ## Links
 - [Deployed Application](https://stanjng.github.io/studyo-frontend/)
 - [Deployed API via Heroku](https://aqueous-crag-04598.herokuapp.com/)
-- [Studyo API](https://stanjng.github.io/studyo-backend/)
+- [Studyo API](https://github.com/stanjng/studyo-backend/)
 
 ## Technologies
 - Axios
